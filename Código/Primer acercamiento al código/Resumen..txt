@@ -1,0 +1,3 @@
+En este código se propone un primer enfoque.
+Cobra importancia la recojida de datos y la transformación hasta el entrenamiento.
+
