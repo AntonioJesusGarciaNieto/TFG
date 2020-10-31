@@ -1,4 +1,4 @@
-En el siguiente texto pasaré a condensar la información contenida en el artículo: "An Ensemble of Fine-Tuned Convolutional Neural Networks for Medical Image Classification"[1].
+## En el siguiente texto pasaré a condensar la información contenida en el artículo: "An Ensemble of Fine-Tuned Convolutional Neural Networks for Medical Image Classification"[1].
 
 Segmentaré este análisis personal en tres campos: 
 - Type some Markdown on the left
