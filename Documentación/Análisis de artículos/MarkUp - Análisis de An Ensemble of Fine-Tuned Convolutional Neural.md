@@ -1,10 +1,5 @@
 ## En el siguiente texto pasaré a condensar la información contenida en el artículo: "An Ensemble of Fine-Tuned Convolutional Neural Networks for Medical Image Classification"[1].
 
-Segmentaré este análisis personal en tres campos: 
-- Type some Markdown on the left
-- See HTML in the right
-- Magic
-
 El resumen estará sub dividido en:
 - Dominio del problema y objetivo.
 - Pre-procesado de imágenes.
