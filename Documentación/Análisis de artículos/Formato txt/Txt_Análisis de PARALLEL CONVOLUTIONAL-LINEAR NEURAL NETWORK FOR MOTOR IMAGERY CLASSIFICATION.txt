@@ -1,0 +1,81 @@
+Análisis de "PARALLEL CONVOLUTIONAL-LINEAR NEURAL NETWORK FOR MOTOR IMAGERY CLASSIFICATION "
+
+Resumen
+En este artículo científico se trata la aplicación de redes neuronales convolucionales a un motor basado en imágenes de BCI (Brain-Computer Interfaces) 
+
+Generalmente el uso de SVM no puede manejar estas entradas debido a que sus propiedades son demasiado dinámicas.
+
+Por lo que se pretende combinar ambas tecnicas, CNN y SVM para conseguir un resultado mejor que el de utilizar solo SVM.
+
+1.Introducción
+El análisis de EEG (electroencefalograma) es una técnica relativamente consolidada con respecto a los nuevos avances en el campo del Deep Learning.
+
+Se han usado tradicionalmente numerosas técnicas como CSP(common spatial patterns) que combinan filtrado espacial y extracción de características incluyendo en algunos casos un filtrado multibanda de la frecuencia.
+
+Como resultado la energía estática de las EGC son utilizados ampliamente para resolver numerosos problemas.
+
+Generalmente uno de los problemas de estos algoritmos es que descartan la temporalidad eliminando así la información dinámica.
+
+Por lo tanto, si confecionamos una metodología que pueda explotar la información temporal y pueda ser usada junto a características extraidas del la energía podríamos crear un modelo que manejase problemas más complejos a los actuales, en los que se discrimine el tiempo, la energía o ambos.
+
+Algunos de los avances que han promovido este estudio son :
+ - Cambios en las funciones de activación[1]
+ - Métodos para escapar del sobreajuste[2]
+ - Modelos paralelos[3]
+ - Modificación en arquitecturas[4]
+ - Librerías optimizadas y funcionales de Deep Learning[5]
+ - En increible avance en CNN[6]
+ 
+La principal contribución de este artículo es el diseño y analisis de una red convolucional paralela lineal para clasificación de 4 clases de MI.
+
+El set de datos será el usado en la conocida competición de BCI IV-2a [7] 
+
+2.Metodología
+2.1.Representación de EEG en series temporales.
+
+Las actividades relaccionadas con el MI son la sincronización(ERS) y la desicronización(ERD).
+La ERD se define como la diferencia relativa entre la energía antes y después de la señal y es equivalente a la modulación de la amplitud de los EEG grabados durante las tareas de MI.
+
+En el estudio se concretan temas teóricos relaccionados con el estudio de dichas ondas en concreto, esto no es interesante para nuestro proposito luego no lo detallaremos.
+
+2.2.Diseño de la arquitectura.
+Lo primero a definir es la forma de los datos de entrada, recordemos que queremos estudiar entradas estáticas y dinámicas luego las entradas podrían variar. En el estudio se concreta la forma para ambas posibilidades basadas en conceptos teóricos, no nos es interesante,luego no profundizaremos en este tema.
+
+En términos de arquitectura:
+ - Se usará un perceptrón multicapa(MLP) de tres capas para extraer las características de la energía. Los autores del estudio decidieron tomar esta opción tras experimentar con resultados similares con SVM y no aumentar mucho el rendimiento profuncizando el MLP.
+ - Para el estudio de la energía dinámica se realizará una red basada en :
+    - Capas convolucionales paralelas con un kernel de una dimensión cada vez. Este tamaño de kernel asegura que la información de cada canal se guarda.
+    - Average pooling. En problemas de DL generalmente se usan capas de Max pooling pero entrenando EEG esto da resultados pobres.
+    - Capas convolucionales con un kernel de una dimensión cada vez.
+    - MLP antes y depués de cada concatenación. Después de concatenar la información de la convolución y el MPL, la información es introducida en otro MLP para realizar la clasificación.
+- Para ambas entradas estáticas y dinámicas se usa capas de dropout, ReLU como función de activación y en cada arquitectura se entrena de forma individual usando SGD y un criterio Negative Log-Liklihood (NLL).
+
+3.Preprocesado y set de datos.
+El preprocesado, especialmente los filtros espaciales son cruciales en el análisis de EEG. Se adopta un banco de filtros conocido como FBCSP para realizar el preprocesado de nuestros datos. En el artículo se detalla en más profundidad esta parte.
+
+4.Resultados
+El SVM aplicado en la clasificación de energía estática se implemento co LIBSVM[8].
+
+Los resultados han sido los esperados, la combinación de CNN y MLP ha dejado en evidencia a el rendimineto de SVM,MLP y CNN por separado.
+
+5.Bibliografía
+
+[1] -  Vinod Nair and Geoffrey E Hinton, “Rectified linear units improve restricted Boltzmann machines,” in International Conference on Machine Learning (ICML),2010.
+
+[2] -  Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky,
+Ilya Sutskever, and Ruslan Salakhutdinov, “Dropout: A Simple Way to Prevent Neural Networks from Overfitting,” Journal of Machine Learning Research,vol. 15, pp. 1929–1958, 2014.
+
+[3] -  Alex Krizhevsky, “One weird trick for parallelizing convolutional neural networks,” in International Conference on Learning Representations (ICLR), 2014.
+
+[4] - Min Lin, Qiang Chen, and Shuicheng Yan, “Network In Network,” arXiv preprint arXiv:1312.4400, 2013.
+
+[5] - Ronan Collobert, Koray Kavukcuoglu, and Clement ´Farabet, “Torch7: A matlab-like environment for machine learning,” in BigLearn, NIPS Workshop, 2011, number EPFL-CONF-192376.
+
+[6] - Y LeCun, L Bottou, Y Bengio, and P Haffner, “Gradient-Based Learning Applied to Document Recognition,” Proceedings of the IEEE, vol. 86, no.11, pp. 2278–2324, Nov. 1998.
+
+[7] - Ronan Collobert, Koray Kavukcuoglu, and Clement ´ Farabet, “Torch7: A matlab-like environment for machine learning,” in BigLearn, NIPS Workshop, 2011, number EPFL-CONF-192376.
+
+[8] - Chih-Chung Chang and Chih-Jen Lin, “LIBSVM: A library for support vector machines,” ACM Trans. on Intelligent Systems and Technology, vol.  2, pp. 27:1–27:27, 2011, Software available at http://www.csie.ntu.edu.tw/ cjlin/libsvm
+
+
+
