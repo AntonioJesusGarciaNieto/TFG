@@ -1,7 +1,11 @@
-# Análisis de " DermaKNet: Incorporating the knowledge of dermatologists to Convolutional Neural Networks for skin lesion diagnosis "
+# Análisis de "PARALLEL CONVOLUTIONAL-LINEAR NEURAL NETWORK FOR MOTOR IMAGERY CLASSIFICATION "
 
 ## Resumen
-Tradicionalmente
+En este artículo científico se trata la aplicación de redes neuronales convolucionales a un motor basado en imágenes de BCI (Brain-Computer Interfaces) 
+
+Generalmente el uso de SVM no puede manejar estas entradas debido a que sus propiedades son demasiado dinámicas.
+
+Por lo que se pretende combinar ambas tecnicas, CNN y SVM para conseguir un resultado mejor que el de utilizar solo SVM.
 
 ## 1.Introducción
 El análisis de EEG (electroencefalograma) es una técnica relativamente consolidada con respecto a los nuevos avances en el campo del Deep Learning.
@@ -72,3 +76,6 @@ Ilya Sutskever, and Ruslan Salakhutdinov, “Dropout: A Simple Way to Prevent Ne
 [7] - Ronan Collobert, Koray Kavukcuoglu, and Clement ´ Farabet, “Torch7: A matlab-like environment for machine learning,” in BigLearn, NIPS Workshop, 2011, number EPFL-CONF-192376.
 
 [8] - Chih-Chung Chang and Chih-Jen Lin, “LIBSVM: A library for support vector machines,” ACM Trans. on Intelligent Systems and Technology, vol.  2, pp. 27:1–27:27, 2011, Software available at http://www.csie.ntu.edu.tw/ cjlin/libsvm
+
+
+
