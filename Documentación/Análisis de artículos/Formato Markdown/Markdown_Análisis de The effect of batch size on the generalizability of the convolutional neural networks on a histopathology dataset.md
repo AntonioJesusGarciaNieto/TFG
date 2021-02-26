@@ -35,7 +35,8 @@ Para ambos casos se probará un tamañó de lote de 16,32,64,128 y 256 y un rati
 
 # Resultados
 Los resultado del experimento se pueden resumir en la siguiente tabla.
-Imágen
+
+![Tabla de resultados](https://github.com/AntonioJesusGarciaNieto/TFG/blob/main/Img/Art%C3%ADculos/The%20effect%20of%20batch%20size%20on%20the%20generalizability%20of%20the%20convolutional%20neural%20networks%20on%20a%20histopathology%20dataset/Tabla%20de%20resultados.png)
 
 # Conclusión
 
