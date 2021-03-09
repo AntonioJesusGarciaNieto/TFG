@@ -1,6 +1,6 @@
 # Análisis de "The effect of batch size on the generalizability of the convolutional neural networks on a histopathology dataset"
 
-El análisis de este paper estará dividido en tres campos:
+El análisis de este paper estará dividido en los siguientes campos:
  - Motivación
  - Dominio del problema
  - Metodología
