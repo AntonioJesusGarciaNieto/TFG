@@ -31,6 +31,7 @@ Por otro lado la arquitectura del modelo esta compuesta por varios bloques:
 
 Se adjunta imagen de la arquitectura.
 
+![Arquitectura propuesta](https://github.com/AntonioJesusGarciaNieto/TFG/blob/main/Img/Art%C3%ADculos/Diagnosis%20of%20skin%20diseases%20using%20Convolutional%20Neural%20Networks/Image_1.png)
 ## Resultados
 Según el estudio el rendimiento del modelo ha sido del 70%, pero podría llegar al 90% con un mayor número de imágenes.
 
