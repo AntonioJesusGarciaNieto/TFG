@@ -23,6 +23,8 @@ El resultado de seleccionar imágenes de ambos conjuntos ha sido 399 imágenes e
 ## Metodología
 La arquitectura de la red neuronal convolucional que se usa en este estudio no es otra que AlexNet[1]. Además, se le añaden algúnas modificaciones. A continuación se añade una imagen en la que muestra la arquitectura.
 
+![Tabla de resultados](https://github.com/AntonioJesusGarciaNieto/TFG/blob/main/Img/Art%C3%ADculos/DEEMOLE:%20Deep%20Neural%20Networks%20For%20Skin%20Mole%20Lesion%20Classification/Screenshot_5.png)
+
 Analizaremos cada uno de los bloques:
  - `Bloque de Data Augmentation`: Este bloque tiene como finalidad reducir el overfitting. Se realizan una serie de modificaciones como variar las bandas de color RGB, emplear reducción Gaussiana con un filtro de pasa baja, adición de ruido, ecualización del histograma... En la fase de data augmentation ha aumentado las imágenes originales (399) a 10000, es decir cada imágen general ha generado 25 nuevas.
  
@@ -32,6 +34,8 @@ De cara a obtener unos resultados robustos el esquema de entrenamiento se ha bas
 
 ## Resultados
 Los resultados obtenidos se pueden resumir en la siguiente tabla.
+
+![Tabla de resultados](https://github.com/AntonioJesusGarciaNieto/TFG/blob/main/Img/Art%C3%ADculos/DEEMOLE:%20Deep%20Neural%20Networks%20For%20Skin%20Mole%20Lesion%20Classification/trabla_resultados.png)
 
 Como anotación indicar que:
  - Sens se corresponde con la sensibilidad = TP/(TP + FN)
