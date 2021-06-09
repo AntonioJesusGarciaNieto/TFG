@@ -2,14 +2,14 @@
 
 ## Información
 
-**Universidad** : Universidad de Sevilla.
-**Centro de estudio** : Escuela Técnica Superior de Ingeniería Informática.
-**Título del proyecto** : Sistema de apoyo a la decisión cínica para el estudio de lesiones de piel basado en aprendizaje automático.
-**Palabras clave**: Redes neuronales convolucionales, Detección de lesiones de piel, Aprendizaje profundo, Segmentación semántica, Sistema de asistencia clínica
-**Tutor**: Isabel de los Ángeles Nepomuceno Chamorro.
+- **Universidad** : Universidad de Sevilla.
+- **Centro de estudio** : Escuela Técnica Superior de Ingeniería Informática.
+- **Título del proyecto** : Sistema de apoyo a la decisión cínica para el estudio de lesiones de piel basado en aprendizaje automático.
+- **Palabras clave**: Redes neuronales convolucionales, Detección de lesiones de piel, Aprendizaje profundo, Segmentación semántica, Sistema de asistencia clínica
+- **Tutor**: Isabel de los Ángeles Nepomuceno Chamorro.
 ---
-**Autor**: Antonio Jesús García Nieto.
-**Correo de contacto**: antgarnie1@alum.us.es
+- **Autor**: Antonio Jesús García Nieto.
+- **Correo de contacto**: antgarnie1@alum.us.es
 ---
 
 ## Resumen del proyecto y objetivos.
@@ -20,8 +20,11 @@ En este proyecto se pretende realizar un estudio exploratorio de modelos basados
 ## Mapa del repositorio 
 
 |-- Código -> En esta carpeta se encuentran separado por experimento todos los cuadernillos y documentos referente a la investigación practica.
-|-- Documentación -> Se encuentra la ultima versión del TFG y algunos resumenes de artículos que han sido de interes durante la evolución del proyecto
+
+|-- Documentación -> Se encuentra la ultima versión del TFG y algunos resumenes de artículos que han sido de interes durante la evolución del proyecto.
+
 |-- Img -> Se encuentran las imágenes del proyecto.
+
 | -- README.md --> Readme del proyecto.
  
 ## Experimentos.
@@ -57,8 +60,7 @@ La pagina de inicio de la demo consta de un menú de navegación compuesto por t
 Para probar la demo completa debemos seguir el siguiente flujo:
  1. **Crear un usuario.** Para ello clickamos en log in, aquí y completamos el formulario.
  2. **Crear un dossier con una imágen.** Una vez loggeados nos aparecerá una nueva opción en la barra de navegación: "Listado de dossieres", clickamos en ella, posteriormente en el simbolo [+] y rellenamos los campos indicados: título del dossier, imágen y título de la imagen. Pinchamos en aceptar.
-3. **Analizar la imágen.** Clickamos de nuevo en "listado de dossieres". Nos aparecerá el nuevo dossier. Pinchamos en ver en detalles. Nos mostrará la información referente a la imágen.
-Damos a analizar y nos aparecerá un resultado semejante a esto:
+ 3. **Analizar la imágen.** Clickamos de nuevo en "listado de dossieres". Nos aparecerá el nuevo dossier. Pinchamos en ver en detalles. Nos mostrará la información referente a la imágen. Damos a analizar y nos aparecerá un resultado semejante a esto:
 
 ![Screenshot_24](https://user-images.githubusercontent.com/45717153/121396595-d2bcf700-c953-11eb-9f4d-a6718261029a.png)
 
